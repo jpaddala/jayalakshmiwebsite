@@ -1,0 +1,731 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: white;
+}
+
+section {
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.company {
+    font-family: "Playfair Display", serif;
+    color: #919197;
+    margin-right: auto;
+}
+
+.company a {
+    text-decoration: none;
+    color: #919197;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.contact-info a {
+    color: rgb(154, 152, 152); /* Default color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-info a[href^="mailto:jayalakshmiengg5@gmail.com"] {
+    color: rgb(154, 152, 152);
+}
+
+.contact-info a[href^="https://wa.me/919885218817"] {
+    color: rgb(154, 152, 152);
+}
+
+.contact-info a:hover,
+.contact-info a[href^="https://wa.me/919885218817"]:hover,
+.contact-info a[href^="mailto:jayalakshmiengg5@gmail.com"]:hover {
+    color: black; /* Color on hover */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    color: rgb(154, 152, 152);
+}
+
+.contact-info:hover {
+    color: #070708;
+}
+
+.contact-info i {
+    margin-right: 5px;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.contact-info div {
+    margin-right: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+nav {
+    background-color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #0073e6;
+}
+
+.nav-links li .dropbtn {
+    position: relative;
+}
+
+.nav-links li .dropbtn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #0073e6;
+    bottom: -5px;
+    left: 0;
+    border-radius: 5px;
+    transition: width 0.3s ease-in;
+}
+
+.nav-links li .dropbtn:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #0073e6;
+}
+
+/* Full width image with overlay text */
+#banner-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 500px;
+}
+
+.text-wrap {
+    position: absolute;
+    bottom: 200px;
+    width: 20%;
+    left:20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.text-wrap h1 {
+    color: white;
+    font-size: 2em;
+    margin: 0;
+}
+.breadcrumb {
+        background-color: #f5f7f8;
+        padding: 10px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .breadcrumb a {
+        text-decoration: none;
+        color: #6c757d;
+        font-weight: bold;
+    }
+
+    .breadcrumb a:hover {
+        color: #007bff;
+    }
+
+    .breadcrumb span {
+        color: #6c757d;
+        margin-left: 10px;
+        
+    }
+
+    /* Main Content Section */
+    .content {
+        padding: 40px 50px;
+        background-color: #f8f9fa;
+    }
+
+    .content h1 {
+        color: #007bff;
+        font-weight: bold;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 1.1em;
+        color: #6c757d;
+        line-height: 1.7em;
+    }
+
+
+
+
+    /*filteration*/
+
+
+    .container {
+        display:block;
+        height: auto;
+        background-image: url(https://images.pexels.com/photos/1509607/pexels-photo-1509607.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+        width: 250px;
+        background-color: #e8f7ff;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        height: auto;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        width: 250px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .sidebar ul li {
+        margin: 10px 0;
+        width: 250px;
+    }
+
+    .sidebar ul li button {
+        background-color: #00a1df;
+        color: white;
+        padding: 10px;
+        width: 250px;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        border-radius: 5px;
+
+        
+    }
+
+    .sidebar ul li button:hover {
+        background-color: #007ba1;
+    }
+    .sidebar ul li button.active {
+    background-color: #ff5e00; /* Blue to show it's selected */
+    color: white;
+    font-weight: bold;
+    }
+
+    /* Main content section */
+    .content {
+        flex-grow: 1;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        cursor: pointer;
+    }
+
+        .grid-item {
+        width: calc(33% - 20px);
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px; /* Add margin-bottom for space between image and title */
+    }
+    .grid-item.borewell {
+        width: calc(25% - 20px); /* Reduce the width */
+        height: 350px; /* Increase the height */
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px; /* Space for the title below the container */
+    }
+    .grid-item.openwell {
+        width: calc(25% - 20px); /* Reduce the width */
+        height: 350px; /* Increase the height */
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px; /* Space for the title below the container */
+    }
+
+    .grid-item.centrifugal {
+        width: calc(25% - 20px); /* Reduce the width */
+        height: 350px; /* Increase the height */
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px; /* Space for the title below the container */
+    }
+    .grid-item.compressor{
+        width: calc(25% - 20px); /* Reduce the width */
+        height: 350px; /* Increase the height */
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px; /* Space for the title below the container */
+    }
+    .grid-item.solar {
+        width: calc(25% - 20px); /* Reduce the width */
+        height: 350px; /* Increase the height */
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px; /* Space for the title below the container */
+    }
+    .grid-item.solar img{
+        max-width: 250px; /* Set a smaller width for the image */
+        height: 220px; /* Increase the height */
+        object-fit: cover; /* Ensure the image scales properly without distortion */
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+
+    .grid-item.compressor img{
+        max-width: 250px; /* Set a smaller width for the image */
+        height: 200px; /* Increase the height */
+        object-fit: cover; /* Ensure the image scales properly without distortion */
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+
+    .grid-item.centrifugal img {
+        max-width: 250px; /* Set a smaller width for the image */
+        height: 200px; /* Increase the height */
+        object-fit: cover; /* Ensure the image scales properly without distortion */
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+
+    .grid-item.openwell img {
+        max-width: 200px; /* Set a smaller width for the image */
+        height: 200px; /* Increase the height */
+        object-fit: cover; /* Ensure the image scales properly without distortion */
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+
+    /* Adjust the image size inside borewell grid items */
+    .grid-item.borewell img {
+        max-width: 110px; /* Set a smaller width for the image */
+        height: 200px; /* Increase the height */
+        object-fit: cover; /* Ensure the image scales properly without distortion */
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+
+    .grid-title {
+        background-color: #00a1df; /* Customize background color */
+        color: white;
+        border: none;
+        padding: 15px;
+        width: 100%; /* Make the button full width */
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px; /* Add rounded corners */
+    }
+    .grid-title:hover {
+    background-color: #007ba1; /* Change background color on hover */
+    }
+
+    .grid-item img {
+        max-width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .grid-item .title {
+        background-color: #00a1df;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .hidden {
+        display: none;
+    }
+    .subcategories {
+    display: none;
+    margin-top: 10px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+    max-height: 0; /* Initially hidden */
+}
+
+.grid-item.open .subcategories {
+    display: block;
+    max-height: 300px; /* Adjust to fit the content */
+}
+
+.subcategory-item {
+    margin-bottom: 10px;
+}
+
+.subcategory-item a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+}
+
+.subcategory-item a:hover {
+    text-decoration: underline;
+}
+/* translation effet*/
+
+/* Style for V4 Submersible Dropdown */
+#dropdownV4 {
+background-color: white;
+border: 3px solid #67caee;
+padding: 10px;
+display: none; /* Initially hidden */
+box-sizing: border-box;
+max-width: fit-content;
+transition: transform 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+min-height: 100px; /* Set a minimum height */
+border-radius: 5px; /* Match the border radius of the grid item */
+margin-top: 10px; /* Space between dropdown and the element above it */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+
+}
+
+#dropdownV4 ul {
+list-style-type: none;
+padding: 0;
+padding-right: 15px;
+
+}
+
+#dropdownV4 ul li {
+padding: 5px 0;
+font-weight: bold;
+color: #52a2f1;
+cursor: pointer;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+
+#dropdownV4 ul li:hover {
+text-decoration: underline;
+}
+
+/* Style for V6 Submersible Dropdown */
+#dropdownV6 {
+background-color: white;
+border: 3px solid #67caee;
+padding: 10px;
+display: none; /* Initially hidden */
+box-sizing: border-box;
+max-width: fit-content;
+transition: transform 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+min-height: 100px; /* Set a minimum height */
+border-radius: 5px; /* Match the border radius of the grid item */
+margin-top: 10px; /* Space between dropdown and the element above it */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+#dropdownV6 ul {
+list-style-type: none;
+padding: 0;
+padding-right: 15px;
+}
+
+#dropdownV6 ul li {
+padding: 5px 0;
+font-weight: bold;
+color: #52a2f1;
+cursor: pointer;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+#dropdownV6 ul li:hover {
+text-decoration: underline;
+}
+
+/* Style for V8 Submersible Dropdown */
+#dropdownV8 {
+background-color: white;
+border: 3px solid #67caee;
+padding: 10px;
+display: none; /* Initially hidden */
+box-sizing: border-box;
+max-width: fit-content;
+transition: transform 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+min-height: 100px; /* Set a minimum height */
+border-radius: 5px; /* Match the border radius of the grid item */
+margin-top: 10px; /* Space between dropdown and the element above it */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+#dropdownV8 ul {
+list-style-type: none;
+padding: 0;
+padding-right: 15px;
+}
+
+#dropdownV8 ul li {
+padding: 5px 0;
+font-weight: bold;
+color: #52a2f1;
+cursor: pointer;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+#dropdownV8 ul li:hover {
+text-decoration: underline;
+}
+
+#dropdown-solar {
+background-color: white;
+border: 3px solid #67caee;
+padding: 10px;
+display: none; /* Initially hidden */
+box-sizing: border-box;
+max-width: fit-content;
+transition: transform 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+min-height: 100px; /* Set a minimum height */
+border-radius: 5px; /* Match the border radius of the grid item */
+margin-top: 10px; /* Space between dropdown and the element above it */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+
+}
+
+#dropdown-solar ul {
+list-style-type: none;
+padding: 0;
+padding-right: 15px;
+
+}
+
+#dropdown-solar ul li {
+padding: 5px 0;
+font-weight: bold;
+color: #52a2f1;
+cursor: pointer;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+
+#dropdown-solar ul li:hover {
+text-decoration: underline;
+}
+
+/* Dropdown Transition for smooth opening */
+.dropdown-content {
+transition: all 0.3s ease-in-out;
+width: max-content;
+}
+
+
+footer {
+    background-color: #0083C9;
+    color: white;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info-f {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact-info-f p {
+    margin: 5px 0;
+}
+
+.contact-info-f a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info-f i {
+    margin-right: 5px;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 20px 0;
+}
+
+
+footer p {
+margin-top: 20px;
+font-size: 0.9em;
+}
+/*footer section*/
+.footer-container {
+    display: flex;
+    gap: 10px; /* Reduced space between Contact Us and Applications */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Ensures the sections wrap if screen width is limited */
+}
+
+.footer-section {
+    flex: 1; /* Makes each section take up equal space */
+    max-width: 180px; /* Slightly smaller width for a more compact layout */
+}
+
+.footer-section h4 {
+    font-size: 1.1em; /* Slightly smaller font for compactness */
+    margin-bottom: 8px;
+    color: #f4f4f4;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Removes any extra margin for a tighter layout */
+}
+
+.footer-section ul li {
+    margin: 3px 0; /* Reduced space between list items */
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9em; /* Smaller font size for compact layout */
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}@media (max-width: 768px) {
+.nav-links {
+flex-direction: column; /* Stack links vertically */
+align-items: center; /* Center align */
+}
+
+.category-card {
+width: 90%; /* Make cards full width on small screens */
+}
+}
+

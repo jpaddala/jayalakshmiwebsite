@@ -1,0 +1,416 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+}
+
+.logo img {
+    width: 100px;
+}
+/* Add this in your CSS */
+link[rel="icon"] {
+    border-radius: 50%;
+  }
+  
+
+.company {
+    font-family: "Playfair Display", serif;
+    color: #919197;
+    margin-right: auto;
+}
+
+.company a {
+    text-decoration: none;
+    color: #919197;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.contact-info a {
+    color: rgb(154, 152, 152); /* Default color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-info a[href^="mailto:jayalakshmiengg5@gmail.com"] {
+    color: rgb(154, 152, 152);
+}
+
+.contact-info a[href^="https://wa.me/919885218817"] {
+    color: rgb(154, 152, 152);
+}
+
+.contact-info a:hover,
+.contact-info a[href^="https://wa.me/919885218817"]:hover,
+.contact-info a[href^="mailto:jayalakshmiengg5@gmail.com"]:hover {
+    color: black; /* Color on hover */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    color: rgb(154, 152, 152);
+}
+
+.contact-info:hover {
+    color: #070708;
+}
+
+.contact-info i {
+    margin-right: 5px;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.contact-info div {
+    margin-right: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li a:hover {
+    color: #0073e6;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url(https://torrenpumps.com/file/wp-content/uploads/2022/01/Solar-Submersible-Pump-ac.jpg);
+    height: 1002px; /* Image height */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps banner fixed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Banner Text on Hero Section */
+.hero-text {
+    position: absolute;
+    padding-bottom: 500px;
+    bottom: 150px; /* Adjusting the position to just above the button */
+    font-size: 2.5em;
+    font-weight: 500;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-family: Playfair Display;
+    line-height: 1.2; /* Ensures the text is well spaced when split */
+}
+
+.hero-text span {
+    display: block;
+    bottom: auto;
+}
+
+.hero button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.hero button:hover {
+transform: scale(1.1); /* Makes the button slightly larger */
+background-color: #0073e6; /* Changes the background color on hover */
+}
+.Catalogue {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+nav {
+    background-color: white;
+    border-top: 1px solid lightgray;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #0073e6;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+/* New Section Style */
+.product-category {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333; /* Dark color for better visibility */
+    
+}
+
+.divider {
+    width: 60%;
+    height: 1px;
+    background-color: #333;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.category-description {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.pump-categories {
+display: grid;
+justify-content: space-around;
+padding: 20px;
+background-color: #f0f8ff;
+flex-wrap: wrap;
+gap: 20px;
+background-image: url(https://media.gettyimages.com/id/1323677055/video/flowing-water-liquid-freshness-slow-motion-horizontal-movement-bright.jpg?s=640x640&k=20&c=Ud5nUYrg57a3K82vYbUElDL7H0LZF-N9Y9gPGnq5HIY=);
+background-size: cover;
+background-position: center;
+background-attachment: fixed; /* Keeps banner fixed */
+display: flex;
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.category-card {
+background-color: white;
+border: 1px solid #ddd;
+padding: 15px;
+width: 15%;
+height: 500px; /* Adjusted height to match image */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-align: center;
+transition: transform 0.3s ease;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+cursor: pointer;
+}
+
+.category-card img {
+width: 100%;
+height: 200px; /* Fixed height for images */
+object-fit: cover; /* Ensures the image fits well */
+margin-bottom: 20px;
+}
+
+.category-card h3 {
+margin: 15px 0 10px;
+font-size: 20px;
+margin-bottom: 15px;
+color: #333;
+}
+
+.category-card p {
+font-size: 14px;
+color: #666;
+margin-bottom: 20px;
+flex-grow: 1;
+text-align:justify;
+}
+
+.category-card a {
+text-decoration: none;
+color: #0073e6;
+font-weight: bold;
+transition: color 0.2s ease;
+}
+
+.category-card a:hover {
+color: #005bb5;
+}
+
+.category-card:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+border: 5px solid #67caee;
+}
+
+footer {
+    background-color: #0083C9;
+    color: white;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info-f {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact-info-f p {
+    margin: 5px 0;
+}
+
+.contact-info-f a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info-f i {
+    margin-right: 5px;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 20px 0;
+}
+
+
+footer p {
+margin-top: 20px;
+font-size: 0.9em;
+}
+/*footer section*/
+.footer-container {
+    display: flex;
+    gap: 10px; /* Reduced space between Contact Us and Applications */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Ensures the sections wrap if screen width is limited */
+}
+
+.footer-section {
+    flex: 1; /* Makes each section take up equal space */
+    max-width: 180px; /* Slightly smaller width for a more compact layout */
+}
+
+.footer-section h4 {
+    font-size: 1.1em; /* Slightly smaller font for compactness */
+    margin-bottom: 8px;
+    color: #f4f4f4;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Removes any extra margin for a tighter layout */
+}
+
+.footer-section ul li {
+    margin: 3px 0; /* Reduced space between list items */
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9em; /* Smaller font size for compact layout */
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}@media (max-width: 768px) {
+.nav-links {
+flex-direction: column; /* Stack links vertically */
+align-items: center; /* Center align */
+}
+
+.category-card {
+width: 90%; /* Make cards full width on small screens */
+}
+}
+
