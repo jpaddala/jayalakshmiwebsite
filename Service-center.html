@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Center Locator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+        }
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        #address {
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Find the nearest authorized service center</h2>
+        <div class="filters">
+            <select id="category">
+                <option value="AGRICULTURE PUMPS">AGRICULTURE PUMPS</option>
+                <option value="RESDENTIAL PUMPS">RESDENTIAL PUMPS</option>
+                <option value="SOLAR PUMPS">SOLAR PUMPS</option>
+                <option value="INDUSTRIAL PUMPS">INDUSTRIAL PUMPS</option>
+                <option value="DEWATERING PUMPS">DEWATERING PUMPS</option>
+                <option value="DEWATERING PUMPS">DEWATERING PUMPS</option>
+                <option value="Commercial PUMPS">Commercial PUMPS</option>
+
+
+            </select>
+            <select id="state">
+                <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+                <option value="TELANGANA">TELANGANA</option>
+                <option value="TAMIL NADU">TAMIL NADU</option>
+            </select>
+            <select id="city">
+                <option value="VISAKHAPATNAM">VISAKHAPATNAM</option>
+                <option value="VIJAYAWADA">VIJAYAWADA</option>
+                <option value="CHENNAI">CHENNAI</option>
+            </select>
+            <button onclick="findServiceCenter()">Find</button>
+        </div>
+
+        <div id="address-section">
+            <p id="address"></p>
+        </div>
+        
+        <div id="map" style="height: 400px; width: 600px;"></div>
+    </div>
+
+    <script>
+        var map;
+        var marker;
+
+        function initMap(lat = 16.5062, lng = 80.6480) {
+            var center = {lat: lat, lng: lng};
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: center
+            });
+
+            marker = new google.maps.Marker({
+                position: center,
+                map: map,
+                title: 'Service Center Location'
+            });
+
+            // Update marker click event to redirect to Google Maps
+            marker.addListener('click', function() {
+                window.open(`https://www.google.com/maps?q=${lat},${lng}`, '_blank');
+            });
+        }
+
+        function findServiceCenter() {
+            var category = document.getElementById('category').value;
+            var state = document.getElementById('state').value;
+            var city = document.getElementById('city').value;
+
+            // Mock Data for location and address
+            var serviceCenterInfo = {
+                address: "SRI SRINIVASA ELECTRICAL WORKS, VJA #12-7-17A, HAYATKHAN ST., TARAPETA",
+                lat: 16.5062,
+                lng: 80.6480
+            };
+
+            // Update address section
+            document.getElementById('address').innerHTML = serviceCenterInfo.address;
+
+            // Initialize the map with new location
+            initMap(serviceCenterInfo.lat, serviceCenterInfo.lng);
+        }
+
+        window.onload = function() {
+            initMap();  // Load the map initially
+        };
+    </script>
+</body>
+</html>
